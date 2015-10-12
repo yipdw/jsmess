@@ -25,12 +25,12 @@ echo ""
 echo "(1/5) Generating dependencies..."
 echo ""
 cd "$MESS64PATH"
-make TARGET=mess depend
+make SUBTARGET=mess depend
 
 echo ""
 echo "(2/5) Rebuilding MESS with symbols..."
 echo ""
-make TARGET=mess SYMBOLS=1 NOWERROR=1 -j4
+make SUBTARGET=mess SYMBOLS=1 NOWERROR=1 -j4
 if [ $? -ne 0 ]
    then
    echo ""
